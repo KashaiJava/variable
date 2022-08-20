@@ -48,11 +48,11 @@ public class Main {
         int denisOld = 83690;
         int kristinaOld = 76230;
         float mashaNew = mashaOld + mashaOld * tenPercent;
-        System.out.println("Новая ЗП Маша " + mashaNew);
+        System.out.println("Новая ЗП Маши " + mashaNew);
         float denisNew = denisOld + denisOld * tenPercent;
-        System.out.println("Новая ЗП Денис " + denisNew);
+        System.out.println("Новая ЗП Дениса " + denisNew);
         float kristinaNew = kristinaOld + kristinaOld * tenPercent;
-        System.out.println("Новая ЗП Кристина " + kristinaNew);
+        System.out.println("Новая ЗП Кристины " + kristinaNew);
         int revenueOld = mashaOld + denisOld + kristinaOld;
         System.out.println("Старый годовой доход "+revenueOld);
         float revenueNew = mashaNew + denisNew + kristinaNew;
