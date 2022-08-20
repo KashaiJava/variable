@@ -7,14 +7,14 @@ public class Main {
         long dog = 4000L;
         double riceWeigh = 1.5;
         float sugarWeight = 2.5f;
-        boolean pigAudlt = pig < 10;
-        char bar = 35;
+        boolean pigAudlt = true;
+        char bar = 'C';
         System.out.println(pigAudlt);
         // Задание 2
         double boxer1 = 78.2;
         double boxer2 = 82.7;
         double weightAllBoxers = boxer1 + boxer2;
-        double weightDifference = boxer2 - boxer1;
+        double weightDifference = Math.abs(boxer2 - boxer1);
         System.out.println("Общий ВЕС боксёров " + weightAllBoxers + " кг");
         System.out.println("Разница в ВЕСе боксёров " + weightAllBoxers + " кг");
         //Задание 3
