@@ -14,9 +14,9 @@ public class Main {
         double boxer1 = 78.2;
         double boxer2 = 82.7;
         double weightAllBoxers = boxer1 + boxer2;
-        double weightDifference = Math.abs(boxer2 - boxer1);
+        double difference = Math.abs(boxer2 - boxer1);
         System.out.println("Общий ВЕС боксёров " + weightAllBoxers + " кг");
-        System.out.println("Разница в ВЕСе боксёров " + weightAllBoxers + " кг");
+        System.out.println("Разница в ВЕСе боксёров " + difference + " кг");
         //Задание 3
         byte bananas = 5;
         byte weightBananas = 80;
@@ -28,37 +28,50 @@ public class Main {
         byte weightIcecreame = 100;
         byte egg = 4;
         byte weightEgg = 70;
-        int weightAllProductsG = bananas * weightBananas + milkMl100 * weightMilk + icecreame * weightIcecreame + egg * weightEgg;
+        float weightAllProductsG = (bananas * weightBananas) + (milkMl100 * weightMilk) + (icecreame * weightIcecreame) + (egg * weightEgg);
         System.out.println("Общий ВЕС продуктов в граммах " + weightAllProductsG + " г");
-  float weightALLproductsKg = weightAllProductsG / 1000F;
+        int gPerKg = 1000;
+        float weightALLproductsKg = weightAllProductsG / gPerKg;
    System.out.println("Общий ВЕС продуктов в килограммах " + weightALLproductsKg + " кг");
         // Задание 4
     byte weightLoseKg = 7;
-    int weightLoseG = weightLoseKg * 1000;
+    int gramsPerKg = 1000;
+    int weightLoseG = weightLoseKg * gramsPerKg;
     System.out.println("Потеря ВЕСа в граммах " + weightLoseG );
     short lose250 = 250;
     short lose500 = 500;
     int daysA = weightLoseG / lose250;
     int daysB = weightLoseG / lose500;
-    System.out.println("Дни с учётом потери 250 гр. в день = " + daysA +"." + " Дни с учётом потери 500 гр в день =" + daysB + "." +
-            "" );
-        // Задание 5
+    double avgDays = (daysA + daysB) / (2 * 1.0);
+    System.out.println("Мин " + daysA);
+    System.out.println("Макс " + daysB);
+    System.out.println("Срд " + avgDays);
+
+    // Задание 5
         float tenPercent = 0.1f;
-        int mashaOld = 67760;
-        int denisOld = 83690;
-        int kristinaOld = 76230;
-        float mashaNew = mashaOld + mashaOld * tenPercent;
+        int mashaOld = 67_760;
+        int denisOld = 83_690;
+        int kristinaOld = 76_230;
+        int mashaNew = (int) (mashaOld + mashaOld * tenPercent);
         System.out.println("Новая ЗП Маши " + mashaNew);
-        float denisNew = denisOld + denisOld * tenPercent;
+        int denisNew = (int) (denisOld + denisOld * tenPercent);
         System.out.println("Новая ЗП Дениса " + denisNew);
-        float kristinaNew = kristinaOld + kristinaOld * tenPercent;
+        int kristinaNew = (int) ( kristinaOld + kristinaOld * tenPercent);
         System.out.println("Новая ЗП Кристины " + kristinaNew);
+
+        int mashaDiff = (mashaNew - mashaOld) * 12;
+        int denisDiff = (denisNew - denisOld) * 12;
+        int kristinaDiff = (kristinaNew - kristinaOld) * 12;
+        System.out.println("годовой доход Маши вырос на " + mashaDiff);
+        System.out.println("годовой доход Дениса вырос на " + denisDiff);
+        System.out.println("годовой доход Кристины вырос на " + kristinaDiff);
+
         int revenueOld = mashaOld + denisOld + kristinaOld;
-        System.out.println("Старый годовой доход "+revenueOld);
-        float revenueNew = mashaNew + denisNew + kristinaNew;
-        System.out.println("Новый годовой доход "+revenueNew);
-        float diffRevenue = revenueNew - revenueOld;
-        System.out.println("Годовой доход вырос на "+diffRevenue);
+        System.out.println("Старый общий годовой доход "+revenueOld);
+        int revenueNew = mashaNew + denisNew + kristinaNew;
+        System.out.println("Новый общий годовой доход "+revenueNew);
+        int diffRevenue = revenueNew - revenueOld;
+        System.out.println("Разница годовых доходов "+diffRevenue);
 
 
     }
